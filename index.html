@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subha Mahalaya - Durga Puja Celebration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/028/694/432/large_2x/mahalaya-creative-social-media-post-for-durga-puja-celebration-durga-puja-is-the-biggest-festival-in-bengal-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.85);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ffcc00;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: dance 1s infinite alternate;
+        }
+
+        .btn:hover {
+            background-color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        @keyframes dance {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .modal-content:hover {
+            transform: scale(1.05);
+        }
+
+        .close {
+            cursor: pointer;
+            color: red;
+            font-size: 1.2em;
+            float: right;
+        }
+
+        .message {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .btn {
+                width: 80%;
+            }
+
+            .dropdown-content {
+                min-width: 100%;
+            }
+        }
+
+        /* Button Positioning */
+        .celebrate-button {
+            margin-bottom: 20px;
+        }
+
+        /* Listen Here Button */
+        .listen-button {
+            margin-bottom: 40px;
+            background-color: #4CAF50;
+            padding: 15px 25px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: dance 1s infinite alternate;
+        }
+
+        .listen-button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        /* Accessibility Enhancements */
+        a:focus, button:focus {
+            outline: 2px dashed #ffcc00; /* Custom focus outline */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Durga Puja Celebration</h1>
+        <nav>
+            <a href="#" id="homeButton">Home</a>
+            <a href="#" id="aboutButton">About</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false">Events</a>
+                <div class="dropdown-content" role="menu">
+                    <a href="#">Devi Pakhser Suchana</a>
+                    <a href="#">Subha Sasthi</a>
+                    <a href="#">Subha Saptami</a>
+                    <a href="#">Subha Astomi</a>
+                    <a href="#">Subha Nabami</a>
+                    <a href="#">Bijaya Dasami</a>
+                    <a href="#">Maa Fire Jachhen Nija Grihe</a>
+                </div>
+            </div>
+            <a href="#" id="contactButton">Contact</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <button class="btn celebrate-button" id="openModal" aria-haspopup="dialog">Celebrate!</button>
+    </div>
+
+    <a href="https://youtu.be/ZdGAAPdu-TQ?si=75WX6PMl0YxTxSGD" target="_blank" class="listen-button">Listen Here</a>
+
+    <div class="modal" id="modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+        <div class="modal-content">
+            <span class="close" id="close" role="button" tabindex="0">&times;</span>
+            <div class="message" id="message" aria-live="polite">Subha Mahalaya !!!! May this day bring joy and blessings to you!</div>
+        </div>
+    </div>
+
+    <script>
+        const openModalButton = document.getElementById("openModal");
+        const modal = document.getElementById("modal");
+        const closeBtn = document.getElementById("close");
+        const message = document.getElementById("message");
+
+        openModalButton.onclick = function() {
+            modal.style.display = "flex";
+            showMessage();
+        };
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" && modal.style.display === "flex") {
+                modal.style.display = "none";
+            } else if (event.key === "Enter") {
+                modal.style.display = "flex";
+                message.innerText = "Subha Mahalaya! Pressing Enter is always a great way to spread joy!";
+            }
+        });
+
+        // Content for Home, About, and Contact buttons
+        document.getElementById("homeButton").onclick = function() {
+            alert("A very happy wishes webpage for people, 2k24 Puja sundor katuk apnero, choriye poruk mayer komol jotirmoyee dristi charidike, Abosan ghotak asubho saktiir");
+        };
+
+        document.getElementById("aboutButton").onclick = function() {
+            alert("Wishes to you and your family");
+        };
+
+        document.getElementById("contactButton").onclick = function() {
+            alert("Contact: pabitra05.maity@gmail.com");
+        };
+    </script>
+</body>
+</html>
